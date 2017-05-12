@@ -1,0 +1,21 @@
+{
+  "name": "Postalicious",
+  "version": "1.0.0",
+  "author": "Aaron Villanueva",
+  "description": "Postalicious",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moniarchy/postalicious.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-rc.1",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  head
+    title Postalicious
+  body
+    h1 Postalicious
+    fieldset
+      label Method
+      select#method
+        option(value='GET') GET
+        option(value='POST') POST
+        option(value='PUT') PUT
+        option(value='DELETE') DELETE
+      label Host
+      input#host(value='http://', type='text', name='host')
+    fieldset
+      label Query Paramaters
+      input.qPKey(value='key', type='text', name='key1')
+      input.qPVal(value='value', type='text', name='val1')
+      input.qPKey(value='key', type='text', name='key2')
+      input.qPVal(value='value', type='text', name='val2')
+      input.qPKey(value='key', type='text', name='key3')
+      input.qPVal(value='value', type='text', name='val3')
+    fieldset
+      label Headers
+      input.hKey(value='key', type='text', name='key1')
+      input.hVal(value='value', type='text', name='val1')
+      input.hKey(value='key', type='text', name='key2')
+      input.hVal(value='value', type='text', name='val2')
+      input.hKey(value='key', type='text', name='key3')
+      input.hVal(value='value', type='text', name='val3')
+    fieldset
+      label Body
+      textarea#body
+    h1
+      input(name='format', onclick='buildRequest()', value='Build Request', type='submit')
+    form.form(method='post', action='/request/post')
+      form.form(method='post', action='/request')
+        textarea#requestBox(name='format', type='input').value= reqBody
+        h1
+          input(onclick='buildRequest()', value='Build Send', type='submit')
+    textarea#responseBox.value= resBody
+    script(src='main.js')

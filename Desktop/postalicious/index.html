@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Postalicious</title>
+  </head>
+  <body>
+    <h1>Postalicious</h1>
+    <textarea id="console">Console</textarea>
+    <fieldset>
+      <label>Method</label>
+      <select id="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <label>Host</label>
+      <input id="host" value="http://" type="text" name="host">
+    </fieldset>
+    <fieldset>
+      <label>Query Paramaters</label>
+      <input value="key" type="text" name="key1" class="qPKey">
+      <input value="value" type="text" name="val1" class="qPVal">
+      <input value="key" type="text" name="key2" class="qPKey">
+      <input value="value" type="text" name="val2" class="qPVal">
+      <input value="key" type="text" name="key3" class="qPKey">
+      <input value="value" type="text" name="val3" class="qPVal">
+    </fieldset>
+    <fieldset>
+      <label>Headers</label>
+      <input value="key" type="text" name="key1" class="hKey">
+      <input value="value" type="text" name="val1" class="hVal">
+      <input value="key" type="text" name="key2" class="hKey">
+      <input value="value" type="text" name="val2" class="hVal">
+      <input value="key" type="text" name="key3" class="hKey">
+      <input value="value" type="text" name="val3" class="hVal">
+    </fieldset>
+    <fieldset>
+      <label>Body</label>
+      <textarea id="body"></textarea>
+    </fieldset>
+    <h1>
+      <input name="format" onclick="buildRequest()" value="Build Request" type="submit">
+    </h1>
+    <form method="post" action="/request/post" class="form">
+      <form method="post" action="/request" class="form">
+        <textarea id="requestBox" name="format" type="input" class="value"></textarea>
+        <h1>
+          <input onclick="buildRequest()" value="Build Send" type="submit">
+        </h1>
+      </form>
+    </form>
+    <textarea id="responseBox" class="value"></textarea>
+    <script src="main.js"></script>
+  </body>
+</html>
